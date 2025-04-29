@@ -63,7 +63,7 @@ function App() {
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <h2 className="text-xl font-semibold mb-2 text-gray-700">Current Balance</h2>
               <p className={`text-4xl font-bold ${calculateBalance() >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                ${calculateBalance().toFixed(2)}
+                Rs {calculateBalance().toFixed(2)}
               </p>
             </div>
 
@@ -177,7 +177,7 @@ function App() {
                       </div>
                       <div className="flex items-center space-x-4">
                         <p className={`font-semibold ${transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'}`}>
-                          {transaction.type === 'credit' ? '+' : '-'}${transaction.amount.toFixed(2)}
+                          {transaction.type === 'credit' ? '+' : '-'}Rs {transaction.amount.toFixed(2)}
                         </p>
                         <button
                           onClick={() => deleteTransaction(transaction.id)}
